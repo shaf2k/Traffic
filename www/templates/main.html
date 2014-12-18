@@ -1,0 +1,39 @@
+<ion-view ng-init="doRefresh(false)">
+			<ion-header-bar id="main-bar" class="bar-balanced">
+				<i class="icon ion-aperture"></i>
+				<h1 class="title"></h1>
+				<div class="buttons">
+					<button class="button button-clear">
+						<i class="icon ion-android-search"></i>
+					</button>
+					<button class="button button-clear" ng-click="showSettings()">
+						<i class="icon ion-android-settings"></i>
+					</button>
+				</div>
+            </ion-header-bar>
+            <ion-content>
+            	<ion-refresher pulling-text="Pull to refresh..." on-refresh="doRefresh(true)">
+                </ion-refresher>
+                <div class="list">
+					<a class="item item-avatar" href="#" ng-repeat="item in items">
+						<div class="icon_type_{{item.type}}">
+							<span ng-show="item.type == 1">A</span>
+							<span ng-show="item.type == 2">S</span>
+							<span ng-show="item.type == 3">G</span>
+							<span ng-show="item.type == 4">F</span>
+							<span ng-show="item.type == 5">O</span>
+						</div>
+						<h2>{{item.text}}</h2>
+						<p>{{item.created_at}}</p>
+					</a>
+                </div>
+            </ion-content>
+            <ion-footer-bar class="bar-stable" ng-click="newReport()">
+                <button type="button" class="button button-clear">What's happening with the traffic?</button>
+                <h1 class="title"></h1>
+                <div class="buttons" ng-click="newReport()">
+                    <!--<button class="button button-clear"><i class="icon ion-image"></i></button>-->
+                    <button class="button button-clear"><i class="icon ion-camera"></i></button>
+                </div>
+            </ion-footer-bar>
+        </ion-view>

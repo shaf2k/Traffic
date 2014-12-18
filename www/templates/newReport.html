@@ -1,0 +1,29 @@
+<div class="modal">
+  <form name="newReport" novalidate>
+  <header class="bar bar-header">
+    <button class="button button-clear icon ion-chevron-left" ng-click="cancelReport()"></button>
+    <h1 class="title left">New Traffic Report</h1>
+		<div class="buttons">
+			<span class="label">{{160 - userReport.comment.length}}</span>
+    	<button type="button" class="button button-balanced" ng-disabled="userReport.type == 0 || newReport.$invalid" ng-click="doReport()">Report</button>
+		</div>
+  </header>
+  <ion-content class="has-header">
+    <div class="list">
+      <label class="item item-input item-select">
+        <div class="input-label">Traffic Type</div>
+        <select name="type" ng-model="userReport.type" required>
+          <option value="1">Accident</option>
+		  <option value="2">Stand Still</option>
+          <option value="3">Go Slow</option>
+          <option value="4">Free</option>
+		  <option value="5">Other</option>
+        </select>
+      </label>
+      <label class="item item-input">
+        <textarea name="comment" rows="10" placeholder="What's happening with the traffic?" ng-model="userReport.comment" ng-trim="false" ng-change="trimComment()" required></textarea>
+      </label>
+    </div>
+  </ion-content>
+  </form>
+</div>

@@ -1,0 +1,78 @@
+/* Empty. Add your own CSS if you like */
+ion-nav-view {
+	background-color: #fff;
+}
+
+#login-view {
+	background-image: url(../img/traffic1.jpg);
+	background-repeat: no-repeat;
+	background-position:top;
+	background-size:cover;
+}
+
+#main-bar i {
+	font-size: 27px;
+	line-height: 32px;
+}
+
+#main-bar .button.button-clear{
+	margin-left: 10px;
+}
+
+#main-bar .button.button-clear .icon:before {
+	font-size: 22px;
+	line-height: 32px;
+}
+
+.bar.bar-stable .title {
+    color: #fff;
+}
+
+#report-btn {
+    width: 100%;
+    text-align: left;
+    margin-right: 80px;
+    border-bottom: 1px solid #e3e3e3;
+}
+
+.buttons {
+    float:right;
+    text-align: right;
+}
+
+.modal .title {
+		text-align: left;
+		margin-left: 40px;
+}
+
+.bar-footer .buttons .button {
+    min-width: 34px;
+}
+
+.bar-footer .buttons .button .icon:before {
+    font-size: 22px;
+}
+
+.bar .label{
+		line-height: 32px;
+		padding: 0 14px;
+}
+
+.list [class^="icon_type_"]{
+	position: absolute;
+	top: 16px;
+	left: 16px;
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	color:#fff;
+	font-size:25px;
+	text-align: center;
+	line-height:40px;
+}
+
+.icon_type_2{ background-color: #f71603; }
+.icon_type_1{ background-color: #881b9e; }
+.icon_type_3{ background-color: #ffd410; }
+.icon_type_4{ background-color: #27df43; }
+.icon_type_5{ background-color: #aaaaaa; }
